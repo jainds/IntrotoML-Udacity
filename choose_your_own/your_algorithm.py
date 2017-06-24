@@ -32,7 +32,15 @@ plt.show()
 ### visualization code (prettyPicture) to show you the decision boundary
 
 
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
 
+clf = KNeighborsClassifier()
+clf.fit(features_train, labels_train)
+
+ans = clf.predict(features_test)
+
+print accuracy_score(ans, labels_test)
 
 
 
